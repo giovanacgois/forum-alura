@@ -19,6 +19,7 @@ public class TopicoDTO {
         this.dataCriacao = topico.getDataCriacao();
     }
 
+
     public Long getId() {
         return id;
     }
@@ -39,4 +40,6 @@ public class TopicoDTO {
         return topicos.stream().map(TopicoDTO::new).collect(Collectors.toList());
     }
 
+    public static class TopicoDto {
+    }
 }
