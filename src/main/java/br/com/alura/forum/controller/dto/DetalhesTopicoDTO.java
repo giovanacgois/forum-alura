@@ -1,4 +1,4 @@
-package br.com.alura.forum.controller;
+package br.com.alura.forum.controller.dto;
 
 import br.com.alura.forum.modelo.StatusTopico;
 import br.com.alura.forum.modelo.Topico;
@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class DetalhesTopicoDTO {
+
     private Long id;
     private String titulo;
     private String mensagem;
@@ -17,7 +18,7 @@ public class DetalhesTopicoDTO {
     private StatusTopico status;
     private List<RespostaDTO> respostas;
 
-    public DetalhesTopicoDTO(Topico topico){
+    public DetalhesTopicoDTO(Topico topico) {
         this.id = topico.getId();
         this.titulo = topico.getTitulo();
         this.mensagem = topico.getMensagem();
@@ -55,4 +56,5 @@ public class DetalhesTopicoDTO {
     public List<RespostaDTO> getRespostas() {
         return respostas;
     }
+
 }
